@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "Comic Neue", cursive;
+	background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
+}
+
+.cards {
+	display: flex;
+	width: 1000px;
+}
+.cards .card {
+	position: relative;
+	margin: 10px;
+	height: 800px;
+	width: 50%;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+}
+.cards .card button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	font-size: 36px;
+	background: none;
+	border: none;
+	color: white;
+	text-shadow: 1px 1px 5px rgb(0, 0, 0);
+	cursor: crosshair;
+	z-index: 10;
+}
+.cards .card button:hover ~ .text {
+	-webkit-clip-path: circle(140% at 92% 5%);
+	clip-path: circle(140% at 92% 5%);
+}
+.cards .card .text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 80px 30px;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	transition: -webkit-clip-path 0.8s;
+	transition: clip-path 0.8s;
+	transition: clip-path 0.8s, -webkit-clip-path 0.8s;
+	-webkit-clip-path: circle(0 at 92% 5%);
+	clip-path: circle(0 at 92% 5%);
+}
+.cards .card .text h1 {
+	color: rgb(182, 179, 97);
+}
+.cards .card .text h2 {
+	margin-bottom: 30px;
+}
+.cards .one {
+	background-image: url(../img/portrait_woman-mini.jpg);
+}
+.cards .two {
+	background-image: url(../img/portrait_man-mini.jpg);
+} /*# sourceMappingURL=style.css.map */
